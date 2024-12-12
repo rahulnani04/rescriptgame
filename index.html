@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Coding Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Adding inline styles for immediate effect */
+        .game-header-image {
+            width: 150px;  /* Increased size */
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .game-character-image {
+            width: 100px;  /* Increased size */
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .game-object {
+            width: 100px;  /* Increased size */
+            height: 100px;
+        }
+
+        .game-object img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .inventory-slot img {
+            width: 50px;  /* Defined size for inventory items */
+            height: 50px;
+            object-fit: contain;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header Section with larger image -->
+        <div class="header">
+            <img src="src/assets/script.png.webp" alt="script" class="game-header-image">
+            <h1>Indian Coding Adventure</h1>
+            <div class="player-stats">
+                <div class="stat">Score: <span id="score">0</span></div>
+                <div class="stat">Level: <span id="level">1</span></div>
+                <div class="stat">Powers: <span id="powers">0</span></div>
+            </div>
+        </div>
+
+        <!-- Main Game Area -->
+        <div class="game-grid">
+            <!-- Code Editor -->
+            <div class="code-editor">
+                <h2>Write Your Sacred Code</h2>
+                <div class="commands-panel">
+                    <button class="cmd-btn" data-cmd="walk">Walk</button>
+                    <button class="cmd-btn" data-cmd="jump">Jump</button>
+                    <button class="cmd-btn" data-cmd="collect">Collect</button>
+                    <button class="cmd-btn" data-cmd="cast">Cast</button>
+                </div>
+                <div id="root"></div>
+            </div>
+
+            <!-- Game World with larger characters -->
+            <div class="game-world">
+                <div class="world-grid">
+                    <div class="game-object hero" id="hero">
+                        <img src="src/assets/indianhero.png.webp" alt="indianhero" class="game-character-image">
+                    </div>
+                    <div class="game-object script">
+                        <img src="src/assets/script.png.webp" alt="script" class="game-character-image">
+                    </div>
+                    <div class="game-object crystal">
+                        <img src="src/assets/crystal.png.webp" alt="Crystal" class="game-character-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Output and Inventory -->
+        <div class="bottom-panel">
+            <div class="output-panel">
+                <h3>Adventure Log</h3>
+                <div class="output-text"></div>
+            </div>
+            <div class="inventory-panel">
+                <h3>Sacred Inventory</h3>
+                <div class="inventory-grid">
+                    <div class="inventory-slot">
+                        <img src="src/assets/potion.png" alt="Potion">
+                    </div>
+                    <div class="inventory-slot">
+                        <img src="src/assets/sword.png" alt="Sword">
+                    </div>
+                    <div class="inventory-slot">
+                        <img src="src/assets/shield.png" alt="Shield">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
